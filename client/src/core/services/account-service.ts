@@ -36,7 +36,7 @@ export class AccountService {
           }
         },
         error: e => {
-          console.log("Login Service error " + e);
+          console.log(e);
         }
       })
     );
