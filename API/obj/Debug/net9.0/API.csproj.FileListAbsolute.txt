@@ -157,3 +157,4 @@ C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\System.Ide
 C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Data\UserSeedData.json
