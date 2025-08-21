@@ -63,7 +63,5 @@ export class MemberProfile implements OnInit, OnDestroy{
         this.editForm?.reset(updatedMember);
       }
     })
-    this.toastr.success('Profile updated successfully');
-    this.memberService.editMode.set(false);
   }
 }
