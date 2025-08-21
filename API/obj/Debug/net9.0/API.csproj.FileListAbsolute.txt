@@ -158,3 +158,5 @@ C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Microsoft.
 C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Data\UserSeedData.json
+C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\CloudinaryDotNet.dll
+C:\Users\user-pc\Downloads\fromScratch\DatingApp\API\bin\Debug\net9.0\Newtonsoft.Json.dll
