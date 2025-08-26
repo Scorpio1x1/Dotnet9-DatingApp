@@ -1,0 +1,22 @@
+<label class="floating-lab text-left">
+  <span>{{label()}}</span>
+  <input
+    [class.input-error]="
+      control.invalid &&
+      control.touched
+    "
+    [class.input-success]="
+      control.valid &&
+      control.touched
+    "
+    class="input w-full"
+    type="{{type()}}"
+    [formControl]="control"
+    placeholder="{{label()}}"
+  />
+  @if(control.hasError('required') && control.touched) {
+  <div class="validation-hint text-error text-xs">
+    You are required to have a display name
+  </div>
+  }
+</label>
