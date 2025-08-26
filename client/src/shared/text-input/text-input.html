@@ -19,4 +19,24 @@
     You are required to have a display name
   </div>
   }
+  @if(control.hasError('email') && control.touched) {
+  <div class="validation-hint text-error text-xs">
+    Invalid email address
+  </div>
+  }
+  @if(control.hasError('minlength') && control.touched) {
+  <div class="validation-hint text-error text-xs">
+    {{label()}} must be atleast {{ control.errors?.['minlength'].requiredLength }} characters
+  </div>
+  }
+  @if(control.hasError('maxlength') && control.touched) {
+  <div class="validation-hint text-error text-xs">
+    {{label()}} must be most {{ control.errors?.['maxlength'].requiredLength }} characters
+  </div>
+  }
+  @if(control.hasError('passwordMismatch') && control.touched) {
+  <div class="validation-hint text-error text-xs">
+    Passwords do not match
+  </div>
+  }
 </label>

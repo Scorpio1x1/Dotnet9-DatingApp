@@ -1,21 +1,64 @@
-<div class="card bg-base-100 w-1/2 mx-auto flex flex-col p-6 rounded-lg shadow-lg">
-    <div class="card-title justify-center text-3xl text-primary">Sign up</div>
-        <div class="card-body w-full">
-            <form [formGroup]="registerForm" class="flex flex-col gap-4 w-full" (ngSubmit)="register()">
-                <app-text-input label="Email" formControlName="email"/>
-                <app-text-input label="Display name" formControlName="displayName"/>
-                <app-text-input label="Password" formControlName="password" type="password"/>
-                <app-text-input label="Confirm Password" formControlName="confirmPassword" type="password"/>
-                <div class="flex items-center justify-end gap-3">
-                    <button class="btn" type="button" (click)="cancel()">Cancel</button>
-                    <button [disabled]="!registerForm.valid" class="btn" type="submit">Register</button>
-                </div>
-            </form>
-        </div>
+<div
+  class="card bg-base-100 w-1/2 mx-auto flex flex-col p-6 rounded-lg shadow-lg"
+>
+  <div class="card-title justify-center text-3xl text-primary">Sign up</div>
+  <div class="card-body w-full">
 
-        <div class="flex flex-col w-full mockup-code text-lg">
-            <div>Form value: {{registerForm.value | json}}</div>
-            <div>Form status: {{registerForm.status | json}}</div>
-        </div>
+    <ul class="steps">
+        <li class="step step-primary">Credentials</li>
+        <li class="step" [class.step-primary]="currentStep() == 2">Profile</li>
+    </ul>
 
+    @if(currentStep() == 1) {
+    <form
+      [formGroup]="credentialsForm"
+      class="flex flex-col gap-4 w-full steps"
+    >
+      <app-text-input label="Email" formControlName="email" class="mt-2"/>
+      <app-text-input label="Display name" formControlName="displayName" />
+      <app-text-input
+        label="Password"
+        formControlName="password"
+        type="password"
+      />
+      <app-text-input
+        label="Confirm Password"
+        formControlName="confirmPassword"
+        type="password"
+      />
+      <div class="flex items-center justify-end gap-3">
+        <button class="btn" type="button" (click)="cancel()">Cancel</button>
+        <button
+          class="btn btn-primary"
+          [disabled]="!credentialsForm.valid"
+          type="button"
+          (click)="nextStep()"
+        >
+          Next
+        </button>
+      </div>
+    </form>
+    } @if(currentStep() == 2) {
+    <form [formGroup]="profileForm" class="flex flex-col w-full gap-4 steps">
+      <div>Profile Form Goes Here</div>
+    </form>
+    <div class="flex items-center justify-end gap-3">
+      <button class="btn" type="button" (click)="prevStep()">Back</button>
+      <button
+        [disabled]="!profileForm.valid"
+        type="button"
+        (click)="nextStep()"
+      >
+        Register
+      </button>
+    </div>
+    }
+  </div>
+
+  <div class="flex flex-col w-full mockup-code text-lg">
+    <div>Credentials value: {{ credentialsForm.value | json }}</div>
+    <div>Credentials status: {{ credentialsForm.status | json }}</div>
+    <div>Profile value: {{ profileForm.value | json }}</div>
+    <div>Profile status: {{ profileForm.status | json }}</div>
+  </div>
 </div>
