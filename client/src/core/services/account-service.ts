@@ -14,6 +14,7 @@ export class AccountService {
   private baseUrl = environment.apiUrl;
 
   register(creds: RegisterCreds) {
+    console.log(creds);
     return this.http.post<User>(this.baseUrl + 'account/register', creds).pipe(
       tap({
         next: user => {
@@ -25,7 +26,7 @@ export class AccountService {
           console.log("Login Service error " + e);
         }
       })
-    );;
+    );
   }
 
   login(creds: LoginCreds) {

@@ -9,14 +9,15 @@
       control.valid &&
       control.touched
     "
+    [max]="maxDate()"
     class="input w-full"
-    type="{{type()}}"
+    [type]="type()"
     [formControl]="control"
     placeholder="{{label()}}"
   />
   @if(control.hasError('required') && control.touched) {
   <div class="validation-hint text-error text-xs">
-    You are required to have a display name
+    You are required to have a {{label()}}
   </div>
   }
   @if(control.hasError('email') && control.touched) {
