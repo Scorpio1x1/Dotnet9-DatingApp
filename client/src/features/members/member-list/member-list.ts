@@ -9,7 +9,7 @@ import { Paginator } from '../../../shared/paginator/paginator';
 
 @Component({
   selector: 'app-member-list',
-  imports: [AsyncPipe, MemberCard, Paginator],
+  imports: [MemberCard, Paginator],
   templateUrl: './member-list.html',
   styleUrl: './member-list.css'
 })
