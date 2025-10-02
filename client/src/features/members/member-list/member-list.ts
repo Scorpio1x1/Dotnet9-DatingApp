@@ -21,6 +21,14 @@ export class MemberList implements OnInit{
   protected memberParams = new MemberParams();
   private updatedParams = new MemberParams();
 
+  constructor() {
+    const filters = localStorage.getItem('filters');
+    if(filters) {
+      this.memberParams = JSON.parse(filters);
+      this.updatedParams = JSON.parse(filters);
+    }
+  }
+
   ngOnInit(): void {
      this.loadMembers();
   }
@@ -55,6 +63,7 @@ export class MemberList implements OnInit{
 
   resetFilters() {
     this.memberParams = new MemberParams();
+    this.updatedParams = new MemberParams();
     this.loadMembers();
   }
 
