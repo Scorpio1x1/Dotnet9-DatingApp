@@ -324,3 +324,8 @@ C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\obj\Debug\net9
 C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\obj\Debug\net9.0\API.pdb
 C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\obj\Debug\net9.0\ref\API.dll
+C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\paulp_1s99zpa\Downloads\CurrentApp\Dotnet9-DatingApp\API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

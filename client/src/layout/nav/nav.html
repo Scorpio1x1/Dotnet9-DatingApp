@@ -46,6 +46,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >Messages</a
       >
+      <a *appHasRole="['Admin', 'Moderator']" routerLink="/admin" routerLinkActive="text-accent">Admin</a>
 
       <a
         [routerLink]="['/errors']"
