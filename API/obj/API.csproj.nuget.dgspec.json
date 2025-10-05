@@ -60,9 +60,9 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[9.0.9, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",

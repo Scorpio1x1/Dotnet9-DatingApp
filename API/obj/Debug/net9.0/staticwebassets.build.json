@@ -1,1 +1,2165 @@
-{"Version":1,"Hash":"A5c6GKfqW+kOYxX7+ezU9WKq8ts6/mK8f4alHUBjdmk=","Source":"API","BasePath":"_content/API","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "G1aviPS+55K9H6eu/2vf5sPSy17WdHPeWkL1OQsxsaA=",
+  "Source": "API",
+  "BasePath": "_content/API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "API\\wwwroot",
+      "Source": "API",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\1dpm1p8bmc-nbuq9si8dk.gz",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/API",
+      "RelativePath": "index#[.{fingerprint=nbuq9si8dk}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "u6ajde3i4f",
+      "Integrity": "qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\6x0scahnf1-vagikyz9qx.gz",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/API",
+      "RelativePath": "favicon#[.{fingerprint=vagikyz9qx}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\favicon.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "spc2whqxhc",
+      "Integrity": "4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\ry6iyzft7j-oi92pnsgnt.gz",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/API",
+      "RelativePath": "styles-RQLUVFP6#[.{fingerprint=oi92pnsgnt}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\styles-RQLUVFP6.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "lp8e8rmz6a",
+      "Integrity": "mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\styles-RQLUVFP6.css"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\vocymb3a0i-eu421t17b5.gz",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/API",
+      "RelativePath": "main-XY2MTTUK#[.{fingerprint=eu421t17b5}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\main-XY2MTTUK.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "a5uywabbcv",
+      "Integrity": "4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\main-XY2MTTUK.js"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\xtgzzp8wob-tvy3j3n584.gz",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/API",
+      "RelativePath": "prerendered-routes#[.{fingerprint=tvy3j3n584}]?.json.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\prerendered-routes.json",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "flm15mbdxq",
+      "Integrity": "o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\prerendered-routes.json"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\zzyd6wgwl5-6p9uuw0vna.gz",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/API",
+      "RelativePath": "3rdpartylicenses#[.{fingerprint=6p9uuw0vna}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\3rdpartylicenses.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "63ul35vjx1",
+      "Integrity": "bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\3rdpartylicenses.txt"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\3rdpartylicenses.txt",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "3rdpartylicenses#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6p9uuw0vna",
+      "Integrity": "ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\3rdpartylicenses.txt"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\favicon.ico",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vagikyz9qx",
+      "Integrity": "+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\index.html",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nbuq9si8dk",
+      "Integrity": "/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\main-XY2MTTUK.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "main-XY2MTTUK#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eu421t17b5",
+      "Integrity": "+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\main-XY2MTTUK.js"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\prerendered-routes.json",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "prerendered-routes#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tvy3j3n584",
+      "Integrity": "p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\prerendered-routes.json"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\styles-RQLUVFP6.css",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "styles-RQLUVFP6#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oi92pnsgnt",
+      "Integrity": "sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles-RQLUVFP6.css"
+    },
+    {
+      "Identity": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\user.png",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "user#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ihs5al52n",
+      "Integrity": "nWSw9JmPgIoXUUXDI/UBkdEhj2zsqD4RI15kcuogM1A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "3rdpartylicenses.6p9uuw0vna.txt",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\zzyd6wgwl5-6p9uuw0vna.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000204750205"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4883"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6p9uuw0vna"
+        },
+        {
+          "Name": "label",
+          "Value": "3rdpartylicenses.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw="
+        }
+      ]
+    },
+    {
+      "Route": "3rdpartylicenses.6p9uuw0vna.txt",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\3rdpartylicenses.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6p9uuw0vna"
+        },
+        {
+          "Name": "label",
+          "Value": "3rdpartylicenses.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw="
+        }
+      ]
+    },
+    {
+      "Route": "3rdpartylicenses.6p9uuw0vna.txt.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\zzyd6wgwl5-6p9uuw0vna.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4883"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6p9uuw0vna"
+        },
+        {
+          "Name": "label",
+          "Value": "3rdpartylicenses.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ="
+        }
+      ]
+    },
+    {
+      "Route": "3rdpartylicenses.txt",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\zzyd6wgwl5-6p9uuw0vna.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000204750205"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4883"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw="
+        }
+      ]
+    },
+    {
+      "Route": "3rdpartylicenses.txt",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\3rdpartylicenses.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZlWsZMzHxybGZq8YYiYXPTq9dQHQG+ZbT337g5GEaBw="
+        }
+      ]
+    },
+    {
+      "Route": "3rdpartylicenses.txt.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\zzyd6wgwl5-6p9uuw0vna.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4883"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bq03Apuq8YLDKmJdPIuZExcxjkzyz9QbkmV7D3tQmjQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\6x0scahnf1-vagikyz9qx.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000237360551"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4212"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15086"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\6x0scahnf1-vagikyz9qx.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4212"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.vagikyz9qx.ico",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\6x0scahnf1-vagikyz9qx.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000237360551"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4212"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vagikyz9qx"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.vagikyz9qx.ico",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15086"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vagikyz9qx"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+RAr6AKXwFKSB2B75Sd7T5C8qJ1lmI+hdxuRx4lOgV8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.vagikyz9qx.ico.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\6x0scahnf1-vagikyz9qx.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4212"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vagikyz9qx"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4JD5TBkaKkYJVw5DzZh1jKJdCSTQYxpre7fdXrSQ/P8="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\1dpm1p8bmc-nbuq9si8dk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000315656566"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3167"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\1dpm1p8bmc-nbuq9si8dk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3167"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY="
+        }
+      ]
+    },
+    {
+      "Route": "index.nbuq9si8dk.html",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\1dpm1p8bmc-nbuq9si8dk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000315656566"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3167"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nbuq9si8dk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg="
+        }
+      ]
+    },
+    {
+      "Route": "index.nbuq9si8dk.html",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nbuq9si8dk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/SrOA2KF9auix5J50FYa1noEsXoY3JhjmxgEbXdRflg="
+        }
+      ]
+    },
+    {
+      "Route": "index.nbuq9si8dk.html.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\1dpm1p8bmc-nbuq9si8dk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3167"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nbuq9si8dk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qnBi6eEtaXXbmPQ7D9VRP6y2McXVKhTisQs4ROwOxxY="
+        }
+      ]
+    },
+    {
+      "Route": "main-XY2MTTUK.eu421t17b5.js",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\vocymb3a0i-eu421t17b5.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000007959629"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125633"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eu421t17b5"
+        },
+        {
+          "Name": "label",
+          "Value": "main-XY2MTTUK.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE="
+        }
+      ]
+    },
+    {
+      "Route": "main-XY2MTTUK.eu421t17b5.js",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\main-XY2MTTUK.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "436912"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eu421t17b5"
+        },
+        {
+          "Name": "label",
+          "Value": "main-XY2MTTUK.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE="
+        }
+      ]
+    },
+    {
+      "Route": "main-XY2MTTUK.eu421t17b5.js.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\vocymb3a0i-eu421t17b5.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125633"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eu421t17b5"
+        },
+        {
+          "Name": "label",
+          "Value": "main-XY2MTTUK.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA="
+        }
+      ]
+    },
+    {
+      "Route": "main-XY2MTTUK.js",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\vocymb3a0i-eu421t17b5.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000007959629"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125633"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE="
+        }
+      ]
+    },
+    {
+      "Route": "main-XY2MTTUK.js",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\main-XY2MTTUK.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "436912"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+nU+cMPa94nj10fF7BysEWP6sYUIBv7NMx+JM7+BGBE="
+        }
+      ]
+    },
+    {
+      "Route": "main-XY2MTTUK.js.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\vocymb3a0i-eu421t17b5.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125633"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4jr+ziXmfS+SgGjAf/sHci+0Uu4CjM2QfyEg3i6+NYA="
+        }
+      ]
+    },
+    {
+      "Route": "prerendered-routes.json",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\xtgzzp8wob-tvy3j3n584.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.025641025641"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4="
+        }
+      ]
+    },
+    {
+      "Route": "prerendered-routes.json",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\prerendered-routes.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4="
+        }
+      ]
+    },
+    {
+      "Route": "prerendered-routes.json.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\xtgzzp8wob-tvy3j3n584.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I="
+        }
+      ]
+    },
+    {
+      "Route": "prerendered-routes.tvy3j3n584.json",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\xtgzzp8wob-tvy3j3n584.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.025641025641"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tvy3j3n584"
+        },
+        {
+          "Name": "label",
+          "Value": "prerendered-routes.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4="
+        }
+      ]
+    },
+    {
+      "Route": "prerendered-routes.tvy3j3n584.json",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\prerendered-routes.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tvy3j3n584"
+        },
+        {
+          "Name": "label",
+          "Value": "prerendered-routes.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p53cyKEVGQ6cGUee02kUdBp9HbdPChFTUp78gHJVBf4="
+        }
+      ]
+    },
+    {
+      "Route": "prerendered-routes.tvy3j3n584.json.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\xtgzzp8wob-tvy3j3n584.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tvy3j3n584"
+        },
+        {
+          "Name": "label",
+          "Value": "prerendered-routes.json.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o1VjVQwEDpUxfB4dvCKgJktgYa0JihcBq69Qd6fuU3I="
+        }
+      ]
+    },
+    {
+      "Route": "styles-RQLUVFP6.css",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\ry6iyzft7j-oi92pnsgnt.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000048181161"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20754"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4="
+        }
+      ]
+    },
+    {
+      "Route": "styles-RQLUVFP6.css",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\styles-RQLUVFP6.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4="
+        }
+      ]
+    },
+    {
+      "Route": "styles-RQLUVFP6.css.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\ry6iyzft7j-oi92pnsgnt.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw="
+        }
+      ]
+    },
+    {
+      "Route": "styles-RQLUVFP6.oi92pnsgnt.css",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\ry6iyzft7j-oi92pnsgnt.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000048181161"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20754"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oi92pnsgnt"
+        },
+        {
+          "Name": "label",
+          "Value": "styles-RQLUVFP6.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4="
+        }
+      ]
+    },
+    {
+      "Route": "styles-RQLUVFP6.oi92pnsgnt.css",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\styles-RQLUVFP6.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oi92pnsgnt"
+        },
+        {
+          "Name": "label",
+          "Value": "styles-RQLUVFP6.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNHrqVO8FEtsNboQYuaMObMBPMY2ACBK+ipzkY7Q2E4="
+        }
+      ]
+    },
+    {
+      "Route": "styles-RQLUVFP6.oi92pnsgnt.css.gz",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\obj\\Debug\\net9.0\\compressed\\ry6iyzft7j-oi92pnsgnt.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Oct 2025 13:55:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oi92pnsgnt"
+        },
+        {
+          "Name": "label",
+          "Value": "styles-RQLUVFP6.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mZfyKQeu2LM9iUAm68TbWkDNgsSK8FxVL42j0o46cHw="
+        }
+      ]
+    },
+    {
+      "Route": "user.5ihs5al52n.png",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\user.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2662"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nWSw9JmPgIoXUUXDI/UBkdEhj2zsqD4RI15kcuogM1A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ihs5al52n"
+        },
+        {
+          "Name": "label",
+          "Value": "user.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWSw9JmPgIoXUUXDI/UBkdEhj2zsqD4RI15kcuogM1A="
+        }
+      ]
+    },
+    {
+      "Route": "user.png",
+      "AssetFile": "C:\\Users\\paulp_1s99zpa\\Downloads\\CurrentApp\\Dotnet9-DatingApp\\API\\wwwroot\\user.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2662"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nWSw9JmPgIoXUUXDI/UBkdEhj2zsqD4RI15kcuogM1A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 16:19:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWSw9JmPgIoXUUXDI/UBkdEhj2zsqD4RI15kcuogM1A="
+        }
+      ]
+    }
+  ]
+}
