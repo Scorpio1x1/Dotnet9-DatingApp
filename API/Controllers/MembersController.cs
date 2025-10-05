@@ -10,20 +10,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [Authorize]
-    public class MembersController(IMemberRepository memberRepository, IPhotoService photoService) : BaseApiController
+    public class MembersController(IUnitOfWork unitOfWork, IPhotoService photoService) : BaseApiController
     {
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Member>>> GetMembers([FromQuery]MemberParams memberParams)
         {
             memberParams.CurrentMemberId = User.GetMemberId();
 
-            return Ok(await memberRepository.GetMembersAsync(memberParams));
+            return Ok(await unitOfWork.MemberRepository.GetMembersAsync(memberParams));
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Member>> GetMember(string id)
         {
-            var member = await memberRepository.GetMemberByIdAsync(id);
+            var member = await unitOfWork.MemberRepository.GetMemberByIdAsync(id);
             if (member == null) return NotFound();
             return member;
         }
@@ -31,7 +31,7 @@ namespace API.Controllers
         [HttpGet("{id}/photos")]
         public async Task<ActionResult<IReadOnlyList<Photo>>> getPhotosById(string id)
         {
-            return Ok(await memberRepository.GetPhotosForMemberAsync(id));
+            return Ok(await unitOfWork.MemberRepository.GetPhotosForMemberAsync(id));
         }
 
         [HttpPut]
@@ -39,7 +39,7 @@ namespace API.Controllers
         {
             var memberId = User.GetMemberId();
 
-            var member = await memberRepository.GetMemberForUpdates(memberId);
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(memberId);
 
             if (member == null) return BadRequest("could not get member");
 
@@ -50,16 +50,16 @@ namespace API.Controllers
 
             member.User.DisplayName = memberUpdateDto.DisplayName ?? member.User.DisplayName;
 
-            memberRepository.Update(member); // Don't need to
+            unitOfWork.MemberRepository.Update(member); // Don't need to
 
-            if (await memberRepository.SaveAllAsync()) return NoContent();
+            if (await unitOfWork.Complete()) return NoContent();
             return BadRequest("Failedto update user");
         }
 
         [HttpPost("add-photo")]
         public async Task<ActionResult<Photo>> AddPhoto([FromForm] IFormFile file)
         {
-            var member = await memberRepository.GetMemberForUpdates(User.GetMemberId());
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(User.GetMemberId());
 
             if (member == null) return BadRequest("cannot update member");
 
@@ -82,7 +82,7 @@ namespace API.Controllers
 
             member.Photos.Add(photo);
 
-            if (await memberRepository.SaveAllAsync()) return photo;
+            if (await unitOfWork.Complete()) return photo;
 
             return BadRequest("Problem adding photo");
         }
@@ -90,7 +90,7 @@ namespace API.Controllers
         [HttpPut("set-main-photo/{photoId}")]
         public async Task<ActionResult> SetMainPhoto(int photoId)
         {
-            var member = await memberRepository.GetMemberForUpdates(User.GetMemberId());
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(User.GetMemberId());
             if (member == null) return BadRequest("Cannot get member from token");
 
             var photo = member.Photos.SingleOrDefault(x => x.Id == photoId);
@@ -103,7 +103,7 @@ namespace API.Controllers
             member.ImageUrl = photo.ImageUrl;
             member.User.ImageUrl = photo.ImageUrl;
 
-            if (await memberRepository.SaveAllAsync()) return NoContent();
+            if (await unitOfWork.Complete()) return NoContent();
 
             return BadRequest("Problem setting main photo");
         }
@@ -111,7 +111,7 @@ namespace API.Controllers
         [HttpDelete("delete-photo/{photoId}")]
         public async Task<ActionResult> DeletePhoto(int photoId)
         {
-            var member = await memberRepository.GetMemberForUpdates(User.GetMemberId());
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(User.GetMemberId());
 
             if (member == null) return BadRequest("Cannot get member from token");
 
@@ -130,7 +130,7 @@ namespace API.Controllers
 
             member.Photos.Remove(photo);
 
-            if (await memberRepository.SaveAllAsync()) return Ok();
+            if (await unitOfWork.Complete()) return Ok();
 
             return BadRequest("Problem deleting the photo");
         }
