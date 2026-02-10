@@ -43,12 +43,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
         var tokenKey = builder.Configuration["TokenKey"]
             ?? throw new Exception("Token key not found - Program.cs");
+        var jwtIssuer = builder.Configuration["Jwt:Issuer"]
+            ?? throw new Exception("Jwt issuer not found - Program.cs");
+        var jwtAudience = builder.Configuration["Jwt:Audience"]
+            ?? throw new Exception("Jwt audience not found - Program.cs");
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey)),
-            ValidateIssuer = false,
-            ValidateAudience = false
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
+            ClockSkew = TimeSpan.FromMinutes(1)
         };
 
         options.Events = new JwtBearerEvents
@@ -101,7 +108,7 @@ try
     var userManager = services.GetRequiredService<UserManager<AppUser>>();
     await context.Database.MigrateAsync();
     await context.Connections.ExecuteDeleteAsync();
-    await Seed.SeedUsers(userManager);
+    await Seed.SeedUsers(userManager, context);
 }
 catch (Exception ex)
 {

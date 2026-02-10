@@ -1,22 +1,50 @@
 <div class="hero bg-base-200 min-h-screen">
     @if (!registerMode()) {
-    <div class="hero-content text-center">
-        <div class="flex flex-col items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="size-60 text-primary">
-                <path
-                    d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
-            </svg>
-            <h1 class="text-5xl font-bold">Find your match</h1>
-            <p class="py-6">Come on in... All you need to do is sign up</p>
-            <div class="flex items-center gap-3">
-                @if (!accountService.currentUser()) {
-                <button (click)="showRegsiter(true)" class="btn btn-primary btn-lg">
-                    Register
-                </button>
-                }
-                
-                <button class="btn btn-primary btn-lg">Learn More</button>
+    <div class="hero-content w-full">
+        <div class="grid lg:grid-cols-2 gap-10 items-center w-full max-w-6xl">
+            <div class="space-y-6">
+                <div class="badge badge-outline badge-primary">New connections, less noise</div>
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                    Find your match with a cleaner, calmer experience
+                </h1>
+                <p class="text-lg text-base-content/70 max-w-xl">
+                    Focused profiles, quick filters, and real-time chat. Built to keep things simple
+                    while you meet the right people.
+                </p>
+                <div class="flex flex-wrap items-center gap-3">
+                    @if (!accountService.currentUser()) {
+                    <button (click)="showRegsiter(true)" class="btn btn-primary btn-lg">
+                        Create account
+                    </button>
+                    }
+                    <button class="btn btn-outline btn-lg">Learn more</button>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl">
+                <div class="card-body gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full">
+                                <img src="/user.png" alt="Profile" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Curated profiles</div>
+                            <div class="text-sm text-base-content/60">Simple, friendly, and quick to browse</div>
+                        </div>
+                    </div>
+                    <div class="divider my-0"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="stat bg-base-200 rounded-box p-4">
+                            <div class="stat-title">Active users</div>
+                            <div class="stat-value text-primary">1.4k</div>
+                        </div>
+                        <div class="stat bg-base-200 rounded-box p-4">
+                            <div class="stat-title">Response rate</div>
+                            <div class="stat-value text-primary">92%</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -4,16 +4,21 @@ using API.Entities;
 using API.Extensions;
 using API.Helpers;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
+[Authorize]
 public class MessagesController(IUnitOfWork unitOfWork) : BaseApiController
 {
     [HttpPost]
     public async Task<ActionResult<MessageDto>> CreateMessage(CreateMessageDto createMessageDto)
     {
-        var sender = await unitOfWork.MemberRepository.GetMemberByIdAsync(User.GetMemberId());
+        var memberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+        var sender = await unitOfWork.MemberRepository.GetMemberByIdAsync(memberId);
         var recipient = await unitOfWork.MemberRepository.GetMemberByIdAsync(createMessageDto.RecipientId);
 
         if (recipient == null || sender == null || sender.Id == createMessageDto.RecipientId)
@@ -37,7 +42,10 @@ public class MessagesController(IUnitOfWork unitOfWork) : BaseApiController
     public async Task<ActionResult<PaginatedResult<MessageDto>>> GetMessagesByContainer(
         [FromQuery] MessageParams messageParams)
     {
-        messageParams.MemberId = User.GetMemberId();
+        var memberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+        messageParams.MemberId = memberId;
 
         return await unitOfWork.MessageRepository.GetMessagesForMember(messageParams);
     }
@@ -45,13 +53,17 @@ public class MessagesController(IUnitOfWork unitOfWork) : BaseApiController
     [HttpGet("thread/{recipientId}")]
     public async Task<ActionResult<IReadOnlyList<MessageDto>>> GetMessageThread(string recipientId)
     {
-        return Ok(await unitOfWork.MessageRepository.GetMessageThread(User.GetMemberId(), recipientId));
+        var memberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+        return Ok(await unitOfWork.MessageRepository.GetMessageThread(memberId, recipientId));
     }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteMessage(string id)
     {
         var memberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(memberId)) return Unauthorized();
 
         var message = await unitOfWork.MessageRepository.GetMessage(id);
 

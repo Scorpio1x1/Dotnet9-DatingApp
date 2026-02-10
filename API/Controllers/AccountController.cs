@@ -1,6 +1,4 @@
 using System;
-using System.Security.Cryptography;
-using System.Text;
 using API.Data;
 using API.DTOs;
 using API.Entities;
@@ -13,8 +11,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-public class AccountController(UserManager<AppUser> userManager, ITokenService tokenService) : BaseApiController
+public class AccountController(
+    UserManager<AppUser> userManager,
+    ITokenService tokenService,
+    AppDbContext context) : BaseApiController
 {
+    private static readonly TimeSpan RefreshTokenLifetime = TimeSpan.FromDays(30);
+
     [HttpPost("register")] // api/account/register
     public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
     {
@@ -47,7 +50,7 @@ public class AccountController(UserManager<AppUser> userManager, ITokenService t
 
         await userManager.AddToRoleAsync(user, "Member");
 
-        await SetRefreshTokenCookie(user);
+        await IssueRefreshTokenAsync(user, familyId: null);
 
         return await user.ToDto(tokenService);
     }
@@ -63,7 +66,7 @@ public class AccountController(UserManager<AppUser> userManager, ITokenService t
 
         if (!result) return Unauthorized("Invalid password");
 
-        await SetRefreshTokenCookie(user);
+        await IssueRefreshTokenAsync(user, familyId: null);
 
         return await user.ToDto(tokenService);
     }
@@ -74,45 +77,104 @@ public class AccountController(UserManager<AppUser> userManager, ITokenService t
         var refreshToken = Request.Cookies["refreshToken"];
         if (refreshToken == null) return NoContent();
 
-        var user = await userManager.Users
-            .FirstOrDefaultAsync(x => x.RefreshToken == refreshToken
-                && x.RefreshTokenExpiry > DateTime.UtcNow);
+        var refreshTokenHash = tokenService.HashRefreshToken(refreshToken);
+        var existingToken = await context.RefreshTokens
+            .FirstOrDefaultAsync(x => x.TokenHash == refreshTokenHash);
 
+        if (existingToken == null) return Unauthorized();
+
+        if (existingToken.Revoked || existingToken.Expires <= DateTime.UtcNow)
+        {
+            await RevokeTokenFamilyAsync(existingToken.FamilyId);
+            await context.SaveChangesAsync();
+            Response.Cookies.Delete("refreshToken");
+            return Unauthorized();
+        }
+
+        var user = await userManager.FindByIdAsync(existingToken.UserId);
         if (user == null) return Unauthorized();
 
-        await SetRefreshTokenCookie(user);
+        var (newToken, rawToken) = BuildRefreshToken(user, existingToken.FamilyId);
+        context.RefreshTokens.Add(newToken);
+        existingToken.Revoked = true;
+        existingToken.RevokedAt = DateTime.UtcNow;
+        existingToken.ReplacedByTokenId = newToken.Id;
+        await context.SaveChangesAsync();
+
+        SetRefreshTokenCookie(rawToken);
 
         return await user.ToDto(tokenService);
     }
 
-    private async Task SetRefreshTokenCookie(AppUser user)
+    private async Task IssueRefreshTokenAsync(AppUser user, string? familyId)
     {
-        var refreshToken = tokenService.GenerateRefreshToken();
-        user.RefreshToken = refreshToken;
-        user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7);
-        await userManager.UpdateAsync(user);
+        var (newToken, rawToken) = BuildRefreshToken(user, familyId);
+        context.RefreshTokens.Add(newToken);
+        await context.SaveChangesAsync();
+        SetRefreshTokenCookie(rawToken);
+    }
 
+    private (RefreshToken Token, string RawToken) BuildRefreshToken(AppUser user, string? familyId)
+    {
+        var rawToken = tokenService.GenerateRefreshToken();
+        var refreshToken = new RefreshToken
+        {
+            Id = Guid.NewGuid().ToString("N"),
+            UserId = user.Id,
+            TokenHash = tokenService.HashRefreshToken(rawToken),
+            FamilyId = familyId ?? Guid.NewGuid().ToString("N"),
+            Jti = Guid.NewGuid().ToString("N"),
+            Expires = DateTime.UtcNow.Add(RefreshTokenLifetime),
+            IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString(),
+            UserAgent = Request.Headers.UserAgent.ToString()
+        };
+
+        return (refreshToken, rawToken);
+    }
+
+    private void SetRefreshTokenCookie(string rawToken)
+    {
         var cookieOptions = new CookieOptions
         {
             HttpOnly = true,
             Secure = true,
             SameSite = SameSiteMode.Strict,
-            Expires = DateTime.UtcNow.AddDays(7)
+            Expires = DateTime.UtcNow.Add(RefreshTokenLifetime)
         };
 
-        Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
+        Response.Cookies.Append("refreshToken", rawToken, cookieOptions);
+    }
+
+    private async Task RevokeTokenFamilyAsync(string familyId)
+    {
+        var tokens = await context.RefreshTokens
+            .Where(x => x.FamilyId == familyId && !x.Revoked)
+            .ToListAsync();
+
+        foreach (var token in tokens)
+        {
+            token.Revoked = true;
+            token.RevokedAt = DateTime.UtcNow;
+        }
     }
 
     [Authorize]
     [HttpPost("logout")]
     public async Task<ActionResult> Logout()
     {
-        await userManager.Users
-            .Where(x => x.Id == User.GetMemberId())
-            .ExecuteUpdateAsync(setters => setters
-                .SetProperty(x => x.RefreshToken, _ => null)
-                .SetProperty(x => x.RefreshTokenExpiry, _ => null)
-                );
+        var refreshToken = Request.Cookies["refreshToken"];
+        if (refreshToken != null)
+        {
+            var refreshTokenHash = tokenService.HashRefreshToken(refreshToken);
+            var existingToken = await context.RefreshTokens
+                .FirstOrDefaultAsync(x => x.TokenHash == refreshTokenHash);
+
+            if (existingToken != null)
+            {
+                await RevokeTokenFamilyAsync(existingToken.FamilyId);
+                await context.SaveChangesAsync();
+            }
+        }
 
         Response.Cookies.Delete("refreshToken");
 

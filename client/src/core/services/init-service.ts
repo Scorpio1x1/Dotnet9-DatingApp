@@ -9,11 +9,10 @@ export class InitService {
   private accountService = inject(AccountService);
 
   init() {
-    return this.accountService.refreshToken().pipe(
+    return this.accountService.refreshTokenWithState().pipe(
       tap(user => {
         if (user) {
           this.accountService.setCurrentUser(user);
-          this.accountService.startTokenRefreshInterval();
         }
       })
     )
