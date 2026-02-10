@@ -16,6 +16,8 @@ public class TokenService(IConfiguration config, UserManager<AppUser> userManage
     public async Task<string> CreateToken(AppUser user)
     {
         var tokenKey = config["TokenKey"] ?? throw new Exception("Cannot get token key");
+        var jwtIssuer = config["Jwt:Issuer"] ?? throw new Exception("Cannot get jwt issuer");
+        var jwtAudience = config["Jwt:Audience"] ?? throw new Exception("Cannot get jwt audience");
         if (tokenKey.Length < 64)
             throw new Exception("Your token key needs to be >= 64 characters");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey));
@@ -35,8 +37,9 @@ public class TokenService(IConfiguration config, UserManager<AppUser> userManage
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            // Not for real production web applications, only to use free azure database
-            Expires = DateTime.UtcNow.AddDays(14),
+            Issuer = jwtIssuer,
+            Audience = jwtAudience,
+            Expires = DateTime.UtcNow.AddMinutes(20),
             SigningCredentials = creds
         };
 
@@ -50,5 +53,12 @@ public class TokenService(IConfiguration config, UserManager<AppUser> userManage
     {
         var randomBytes = RandomNumberGenerator.GetBytes(64);
         return Convert.ToBase64String(randomBytes);
+    }
+
+    public string HashRefreshToken(string refreshToken)
+    {
+        var bytes = Encoding.UTF8.GetBytes(refreshToken);
+        var hash = SHA256.HashData(bytes);
+        return Convert.ToBase64String(hash);
     }
 }

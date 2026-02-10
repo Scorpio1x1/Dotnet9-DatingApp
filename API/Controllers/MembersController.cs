@@ -15,7 +15,10 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Member>>> GetMembers([FromQuery]MemberParams memberParams)
         {
-            memberParams.CurrentMemberId = User.GetMemberId();
+            var memberId = User.GetMemberId();
+            if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+            memberParams.CurrentMemberId = memberId;
 
             return Ok(await unitOfWork.MemberRepository.GetMembersAsync(memberParams));
         }
@@ -38,6 +41,7 @@ namespace API.Controllers
         public async Task<ActionResult> UpdateMember(MemberUpdateDto memberUpdateDto)
         {
             var memberId = User.GetMemberId();
+            if (string.IsNullOrEmpty(memberId)) return Unauthorized();
 
             var member = await unitOfWork.MemberRepository.GetMemberForUpdates(memberId);
 
@@ -59,7 +63,10 @@ namespace API.Controllers
         [HttpPost("add-photo")]
         public async Task<ActionResult<Photo>> AddPhoto([FromForm] IFormFile file)
         {
-            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(User.GetMemberId());
+            var memberId = User.GetMemberId();
+            if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(memberId);
 
             if (member == null) return BadRequest("cannot update member");
 
@@ -71,7 +78,7 @@ namespace API.Controllers
             {
                 ImageUrl = result.SecureUrl.AbsoluteUri,
                 PublicId = result.PublicId,
-                MemberId = User.GetMemberId()
+                MemberId = memberId
             };
 
             if (member.ImageUrl == null)
@@ -90,7 +97,10 @@ namespace API.Controllers
         [HttpPut("set-main-photo/{photoId}")]
         public async Task<ActionResult> SetMainPhoto(int photoId)
         {
-            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(User.GetMemberId());
+            var memberId = User.GetMemberId();
+            if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(memberId);
             if (member == null) return BadRequest("Cannot get member from token");
 
             var photo = member.Photos.SingleOrDefault(x => x.Id == photoId);
@@ -111,7 +121,10 @@ namespace API.Controllers
         [HttpDelete("delete-photo/{photoId}")]
         public async Task<ActionResult> DeletePhoto(int photoId)
         {
-            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(User.GetMemberId());
+            var memberId = User.GetMemberId();
+            if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+            var member = await unitOfWork.MemberRepository.GetMemberForUpdates(memberId);
 
             if (member == null) return BadRequest("Cannot get member from token");
 

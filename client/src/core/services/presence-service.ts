@@ -1,7 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ToastService } from './toast-service';
-import { User } from '../../types/user';
 import { HubConnection, HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
 import { Message } from '../../types/message';
 
@@ -14,10 +13,10 @@ export class PresenceService {
   hubConnection?: HubConnection;
   onlineUsers = signal<string[]>([]);
 
-  createHubConnection(user: User) {
+  createHubConnection(tokenProvider: () => string | undefined) {
     this.hubConnection = new HubConnectionBuilder()
       .withUrl(this.hubUrl + 'presence', {
-        accessTokenFactory: () => user.token
+        accessTokenFactory: () => tokenProvider() ?? ''
       })
       .withAutomaticReconnect()
       .build();

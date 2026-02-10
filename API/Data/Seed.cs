@@ -11,65 +11,90 @@ namespace API.Data;
 
 public class Seed
 {
-    public static async Task SeedUsers(UserManager<AppUser> userManager)
+    public static async Task SeedUsers(UserManager<AppUser> userManager, AppDbContext context)
     {
-        if (await userManager.Users.AnyAsync()) return;
-
-        var memberData = await File.ReadAllTextAsync("Data/UserSeedData.json");
-        var members = JsonSerializer.Deserialize<List<SeedUserDto>>(memberData);
-
-        if (members == null)
+        // This is completely unsafe and not regular but its for demonstration purposes, removed near end.
+        if (!await userManager.Users.AnyAsync())
         {
-            Console.WriteLine("No members in seed data");
-            return;
-        }
+            var memberData = await File.ReadAllTextAsync("Data/UserSeedData.json");
+            var members = JsonSerializer.Deserialize<List<SeedUserDto>>(memberData);
 
-        foreach (var member in members)
-        {
-            var user = new AppUser
+            if (members == null)
             {
-                Id = member.Id,
-                Email = member.Email,
-                UserName = member.Email,
-                DisplayName = member.DisplayName,
-                ImageUrl = member.ImageUrl,
-                Member = new Member
+                Console.WriteLine("No members in seed data");
+                return;
+            }
+
+            foreach (var member in members)
+            {
+                var user = new AppUser
                 {
                     Id = member.Id,
+                    Email = member.Email,
+                    UserName = member.Email,
                     DisplayName = member.DisplayName,
-                    Description = member.Description,
-                    DateOfBirth = member.DateOfBirth,
                     ImageUrl = member.ImageUrl,
-                    Gender = member.Gender,
-                    City = member.City,
-                    Country = member.Country,
-                    LastActive = member.LastActive,
-                    Created = member.Created
+                    Member = new Member
+                    {
+                        Id = member.Id,
+                        DisplayName = member.DisplayName,
+                        Description = member.Description,
+                        DateOfBirth = member.DateOfBirth,
+                        ImageUrl = member.ImageUrl,
+                        Gender = member.Gender,
+                        City = member.City,
+                        Country = member.Country,
+                        LastActive = member.LastActive,
+                        Created = member.Created
+                    }
+                };
+
+                user.Member.Photos.Add(new Photo
+                {
+                    ImageUrl = member.ImageUrl!,
+                    MemberId = member.Id
+                });
+
+                var result = await userManager.CreateAsync(user, "Pa$$w0rd");
+                if (!result.Succeeded)
+                {
+                    Console.WriteLine(result.Errors.First().Description);
                 }
-            };
-
-            user.Member.Photos.Add(new Photo
-            {
-                ImageUrl = member.ImageUrl!,
-                MemberId = member.Id
-            });
-
-            var result = await userManager.CreateAsync(user, "Pa$$w0rd");
-            if (!result.Succeeded)
-            {
-                Console.WriteLine(result.Errors.First().Description);
+                await userManager.AddToRoleAsync(user, "Member");
             }
-            await userManager.AddToRoleAsync(user, "Member");
         }
 
-        var admin = new AppUser
+        var admin = await userManager.FindByEmailAsync("admin@test.com");
+        if (admin == null)
         {
-            UserName = "admin@test.com",
-            Email = "admin@test.com",
-            DisplayName = "Admin"
-        };
+            admin = new AppUser
+            {
+                UserName = "admin@test.com",
+                Email = "admin@test.com",
+                DisplayName = "Admin"
+            };
 
-        await userManager.CreateAsync(admin, "Pa$$w0rd");
-        await userManager.AddToRolesAsync(admin, ["Admin", "Moderator"]);
+            await userManager.CreateAsync(admin, "Pa$$w0rd");
+            await userManager.AddToRolesAsync(admin, ["Admin", "Moderator"]);
+        }
+
+        var hasAdminMember = await context.Members.AnyAsync(x => x.Id == admin.Id);
+        if (!hasAdminMember)
+        {
+            var adminMember = new Member
+            {
+                Id = admin.Id,
+                DisplayName = admin.DisplayName ?? "Admin",
+                Gender = "other",
+                City = "n/a",
+                Country = "n/a",
+                DateOfBirth = DateOnly.FromDateTime(DateTime.UtcNow.AddYears(-30)),
+                Created = DateTime.UtcNow,
+                LastActive = DateTime.UtcNow
+            };
+
+            context.Members.Add(adminMember);
+            await context.SaveChangesAsync();
+        }
     }
 }

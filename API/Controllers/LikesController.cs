@@ -3,16 +3,19 @@ using API.Entities;
 using API.Extensions;
 using API.Helpers;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
+[Authorize]
 public class LikesController(IUnitOfWork unitOfWork) : BaseApiController
 {
     [HttpPost("{targetMemberId}")]
     public async Task<ActionResult> ToggleLike(string targetMemberId)
     {
         var sourceMemberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(sourceMemberId)) return Unauthorized();
 
         if (sourceMemberId == targetMemberId) return BadRequest("You cannot like yourself");
 
@@ -41,14 +44,20 @@ public class LikesController(IUnitOfWork unitOfWork) : BaseApiController
     [HttpGet("list")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetCurrentMemberLikeIds()
     {
-        return Ok(await unitOfWork.LikesRepository.GetCurrentMemberLikeIds(User.GetMemberId()));
+        var memberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+        return Ok(await unitOfWork.LikesRepository.GetCurrentMemberLikeIds(memberId));
     }
 
     [HttpGet]
     public async Task<ActionResult<PaginatedResult<Member>>> GetMemberLikes(
         [FromQuery] LikesParams likesParams)
     {
-        likesParams.MemberId = User.GetMemberId();
+        var memberId = User.GetMemberId();
+        if (string.IsNullOrEmpty(memberId)) return Unauthorized();
+
+        likesParams.MemberId = memberId;
         var members = await unitOfWork.LikesRepository.GetMemberLikes(likesParams);
 
         return Ok(members);

@@ -24,7 +24,7 @@ export class MessageService {
     if (!currentUser) return;
     this.hubConnection = new HubConnectionBuilder()
       .withUrl(this.hubUrl + 'messages?userId=' + otherUserId, {
-        accessTokenFactory: () => currentUser.token
+        accessTokenFactory: () => this.accountService.currentUser()?.token ?? ''
       })
       .withAutomaticReconnect()
       .build();
